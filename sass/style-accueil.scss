@@ -1,4 +1,6 @@
-$main-background-color: #F2F2F2;
+@import 'variables';
+@import 'mixin';
+
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -9,7 +11,25 @@ a {
     text-decoration: none;
 }
 
+.loader {
+    width: 11em;
+    height: 11em;
+    border: 1em solid $main-background-color;
+    border-bottom-color: $dark-purple;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 43%;
+    top: 5%;
+    opacity: 0;
+    animation: rotation-spinner 2s linear;
+    }
+
 .header {
+    animation: main-display 2s;
+    position: sticky;
+    z-index:3;
     &__logo{
         display: block;
         &--center{
@@ -20,7 +40,7 @@ a {
     }
 
     &__search{
-        background-color: #EAEAEA;
+        background-color: $search-background;
         text-align: center;
         font-size: 16px;
         font-weight: 500;
@@ -28,7 +48,7 @@ a {
         padding:16px;
         i {
             margin-right: 17px;
-            color:#353535;
+            color: $dark-grey
         }
     }
 
@@ -52,49 +72,50 @@ a {
             display: inline-block;
             margin: 27px auto 57px;
             padding: 13px 18px;
-            border-radius: 25px;
-            color: white;
-            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
             font-weight: 500;
+            @include bouton-n-shadow($white, linear-gradient(193.33deg, $dark-purple -11.44%, $light-purple 123.93%), 25px, 0px 4px 10px $shadow-color);
+            @include bouton-hover;
         }
     }
 }
 
 .main {
+    animation: main-display 2s;
+    position: sticky;
+    z-index: 3;
     &__nav {
         padding: 20px;
-        background-color: white;
+        background-color: $white;
         display: flex;
         flex-direction: column;
         &--etape {
-            background-color: #F7F7F7;
             font-size: 16px;
             font-weight: 500;
             display: block;
             margin: 12.5px 7px;
-            border-radius: 20px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
             width: 97%;
             height: 72px;
             position: relative;
+            @include bouton-n-shadow($black, $light-grey, 20px, 0px 4px 15px $shadow-grey);
             i {
-                color: #7E7E7E;
+                color: $grey;
                 position: absolute;
                 left: 12%;
                 top: 34%;
                 font-size: 19px;
             }
-            .fa-store {
-                color: #9356DC;
+            &:hover, &:active{
+                i {
+                    color: $dark-purple;
+                }
             }
         }
         &--chiffre{
             border-radius: 34px;
             display: inline-block;
             padding: 4px 9px;
-            background: #9356DC;
-            color: white;
+            background: $dark-purple;
+            color: $white;
             font-size: 14px;
             font-weight: 500;
             position: absolute;
@@ -116,13 +137,15 @@ a {
         font-size: 24px;
         font-weight: 700;
     }
-    &__lien {
-        border-radius: 15px;
-        background-color: white;
+    &__article {
         padding-bottom: 12px;
         margin: 18px 0px;
         display: block;
         position: relative;
+        @include bouton-n-shadow($black, $white, 15px, 0px 4px 15px rgba(0, 0, 0, 0.1));
+        &--lien:active, &--lien:any-link, &--lien:focus, &--lien:hover{
+            color: $black;
+        }
         &--image {
             height: 190px;
             img{
@@ -133,16 +156,13 @@ a {
             }
         }
         &--new {
-            color: #008766;
-            background: #99E2D0;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-            border-radius: 2px;
             display: inline;
             padding: 7px 12px 6px;
             font-size: 14px;
             font-weight: 500;
             position: absolute;
             right: 5%;
+            @include bouton-n-shadow($new-text, $new-background, 2px, 0px 2px 4px $shadow-grey);
         }
         &--nom {
             margin: 16px 0px 12px 13px;
@@ -161,28 +181,51 @@ a {
             right: 5%;
             top: 78%;
             font-size: 22px;
+            width: 22.7px;
+            /**&:active i{
+                background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }**/
         }
-    }
-    &__lien:active, &__lien:link, &__lien:focus, &__lien:hover, &__lien:visited {
-        color: black;
+        .fa-solid{
+            display: none;
+            background: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .fa-regular {
+            display: block;
+            i {
+                color: $black;
+            }
+        }
+        .invisible{
+            display: none;
+        }
+        #heart1:checked + label > .fa-regular, #heart2:checked + label > .fa-regular, #heart3:checked + label > .fa-regular, #heart4:checked + label > .fa-regular{
+            display: none;
+        }
+        #heart1:checked + label > .fa-solid, #heart2:checked + label > .fa-solid, #heart3:checked + label > .fa-solid, #heart4:checked + label > .fa-solid{
+            display: block;
+        }
     }
 }
 
 .footer {
-    background-color: #353535;
+    animation: main-display 2s;
+    position: sticky;
+    z-index: 3;
+    background-color: $dark-grey;
     display: flex;
     flex-direction: column;
     padding: 22px 25px;
     &__logo {
         font-family: 'Shrikhand', cursive;
-        color: white;
+        color: $white;
     }
     &__secondarylink {
         display: flex;
         flex-direction: column;
-        &--lien:active, &--lien:link, &--lien:focus, &--lien:hover, &--lien:visited {
-            color: white
-        }
         &--lien {
             font-size: 16px;
             font-weight: 500;
@@ -194,9 +237,12 @@ a {
             .fa-handshake-angle{
                 margin-right: 7px;
             }
-        }
-        &--lien:nth-child(3), &--lien:nth-child(4) {
-            font-weight: 400;
+            &:nth-child(3), &:nth-child(4) {
+                font-weight: 400;
+            }
+            &:active, &:any-link, &:focus, &:hover {
+                color: $white
+            }
         }
     }
 }

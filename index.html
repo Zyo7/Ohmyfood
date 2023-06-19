@@ -14,13 +14,13 @@
 </head>
 
 <body>
-    <!--loading spinner-->
+    <span class="loader"></span>
     <header class="header">
         <a href="#" class="header__logo"><img class="header__logo--center" src="assets/logo/ohmyfood.png" alt="Logo Ohmyfood"></a>
         <p class="header__search"><i class="fa-sharp fa-solid fa-location-dot"></i>Paris, Belleville</p>
         <div class="header__heading">
             <h1 class="header__heading--title">Réservez le menu qui vous convient</h1>
-            <p class="header__heading--ambiance">Découvrez des restaurantrs d'exception, sélectionnés par nos soins.</p>
+            <h2 class="header__heading--ambiance">Découvrez des restaurantrs d'exception, sélectionnés par nos soins.</h2>
             <a class="header__heading--explorer">Explorer nos restaurants</a>
         </div>
     </header>
@@ -33,64 +33,68 @@
         </nav>
         <section class="sectionresto">
             <h2>Restaurants</h2>
-            <a class="sectionresto__lien" href="restaurants/la-palette-du-gout.html">
-                <article class="sectionresto__lien--article">
-                    <div class="sectionresto__lien--image">
+            <article class="sectionresto__article">
+                <a class="sectionresto__article--lien" href="restaurants/la-palette-du-gout.html">
+                    <div class="sectionresto__article--image">
                         <img src="assets/restaurants/la-palette-du-gout.jpg" alt="Photo d'une assiette du restaurant La palette du goût">
-                        <p class="sectionresto__lien--new">Nouveau</p>
+                        <p class="sectionresto__article--new">Nouveau</p>
                     </div>
-                    <div class="sectionresto__lien--nom">
+                    <div class="sectionresto__article--nom">
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>
                     </div>
-                    <div class="sectionresto__lien--fav">
-                        <i class="fa-sharp fa-regular fa-heart"></i>
-                    </div>
-                </article>
-            </a>
-            <a class="sectionresto__lien" href="#">
-                <article class="sectionresto__lien--article">
-                    <div class="sectionresto__lien--image">
+                </a>
+                <div class="sectionresto__article--fav">
+                    <input type="checkbox" id="heart1" class="invisible">
+                    <label class="btn" for="heart1"><i class="fa-sharp fa-regular fa-heart"></i><i class="fa-sharp fa-solid fa-heart"></i></label>
+                </div>
+            </article>
+            <article class="sectionresto__article">
+                <a class="sectionresto__article--lien" href="#">
+                    <div class="sectionresto__article--image">
                         <img src="assets/restaurants/la-note-enchantee.jpg" alt="Photo d'une assiette du restaurant La note enchantée">
-                        <p class="sectionresto__lien--new">Nouveau</p>
+                        <p class="sectionresto__article--new">Nouveau</p>
                     </div>
-                    <div class="sectionresto__lien--nom">
+                    <div class="sectionresto__article--nom">
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
                     </div>
-                    <div class="sectionresto__lien--fav">
-                        <i class="fa-sharp fa-regular fa-heart"></i>
-                    </div>
-                </article>
-            </a>
-            <a class="sectionresto__lien" href="#">
-                <article class="sectionresto__lien--article">
-                    <div class="sectionresto__lien--image">
+                </a>
+                <div class="sectionresto__article--fav">
+                    <input type="checkbox" id="heart2" class="invisible">
+                    <label class="btn" for="heart2"><i class="fa-sharp fa-regular fa-heart"></i><i class="fa-sharp fa-solid fa-heart"></i></label>
+                </div>
+            </article>
+            <article class="sectionresto__article">
+                <a class="sectionresto__article--lien" href="#">
+                    <div class="sectionresto__article--image">
                         <img src="assets/restaurants/a-la-francaise.jpg" alt="Photo d'une assiette du restaurant À la française">
                     </div>
-                    <div class="sectionresto__lien--nom">
+                    <div class="sectionresto__article--nom">
                         <h3>À la française</h3>
                         <p>Cité Rouge</p>
                     </div>
-                    <div class="sectionresto__lien--fav">
-                        <i class="fa-sharp fa-regular fa-heart"></i>
-                    </div>
-                </article>
-            </a>
-            <a class="sectionresto__lien" href="#">
-                <article class="sectionresto__lien--article">
-                    <div class="sectionresto__lien--image">
+                </a>
+                <div class="sectionresto__article--fav">
+                    <input type="checkbox" id="heart3" class="invisible">
+                    <label class="btn" for="heart3"><i class="fa-sharp fa-regular fa-heart"></i><i class="fa-sharp fa-solid fa-heart"></i></label>
+                </div>
+            </article>
+            <article class="sectionresto__article">
+                <a class="sectionresto__article--lien" href="#">
+                    <div class="sectionresto__article--image">
                         <img src="assets/restaurants/le-delice-des-sens.jpg" alt="Photo d'une assiette du restaurant Le délice des sens">
                     </div>
-                    <div class="sectionresto__lien--nom">
+                    <div class="sectionresto__article--nom">
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
                     </div>
-                    <div class="sectionresto__lien--fav">
-                        <i class="fa-sharp fa-regular fa-heart"></i>
-                    </div>
-                </article>
-            </a>
+                </a>
+                <div class="sectionresto__article--fav">
+                    <input type="checkbox" id="heart4" class="invisible">
+                    <label class="btn" for="heart4"><i class="fa-sharp fa-regular fa-heart"></i><i class="fa-sharp fa-solid fa-heart"></i></label>
+                </div>
+            </article>
         </section>
     </main>
     <footer class="footer">
