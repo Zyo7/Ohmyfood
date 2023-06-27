@@ -1,0 +1,208 @@
+@import 'variables';
+@import 'mixin';
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    &__topheadresto {
+        width: 100%;
+        &--link {
+            margin: 24px;
+            display: inline-block;
+            .fa-arrow-left {
+                font-size: 20px;
+            }
+            &:visited, &:any-link, &:focus, &:hover{
+                color: $black;
+            }
+        }
+        &--title {
+            display: inline-block;
+            font-family: Shrikhand;
+            font-size: 30px;
+            font-weight: 400;
+            margin: 14px 40px 5px;
+        }
+    }
+    &__background{
+        background-image: url("../assets/restaurants/la-palette-du-gout.jpg");
+        height: 275px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+/**
+#test {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: lightblue;
+    width: 150px;
+}
+**/
+.main {
+    background-color: $light-grey;
+    border-radius: 50px 50px 0px 0px;
+    padding: 15px 13px;
+    margin-top: -80px;
+    &__titreresto {
+        &--title {
+            font-family: Shrikhand;
+            font-weight: 400;
+            font-size: 28px;
+            margin-left: 4px;
+        }
+        &--fav {
+            position: absolute;
+            right: 11%;
+            top: 37%;
+            font-size: 22px;
+            width: 22.7px;
+        }
+        .fa-solid{
+            display: none;
+            background: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .fa-regular {
+            display: block;
+            i {
+                color: $black;
+            }
+        }
+        .invisible{
+            display: none;
+        }
+        #heart:checked + label > .fa-regular{
+            display: none;
+        }
+        #heart:checked + label > .fa-solid{
+            display: block;
+        }
+    }
+    .menu {
+        &__titre {
+            display: block;
+            width: 40px;
+            border-bottom: solid 3px $new-background;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+        }
+        &__produit {
+            @include bouton-n-shadow($black, $white, 15px, 0px 4px 15px $shadow-lightgrey);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 12px;
+            height: 69px;
+            &--left {
+                padding: 12px 0px 12px 15px;
+                
+            }
+            &--nom {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                margin: 0;
+                width: 150px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            &--description {
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 18px;
+                margin: 0;
+                width: 150px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;    
+            }
+            &--right{
+                display: flex;
+                flex-direction: row;
+                height: 69px;
+            }
+            &--prix {
+                height: 100%;
+                padding-top: 21px;
+                font-size: 15px;
+                font-weight: 700;
+                padding-right: 15px;
+                line-height: 18px;
+            }
+            &--ok {
+                width: 59px;
+                padding: auto;
+                color: $white;
+                background-color: $new-background;
+                height: 100%;
+                border-radius: 0px 15px 15px 0;
+                display: none;
+                i {
+                    position: relative;
+                    top: 36%;
+                    left: 32%;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    &__bouton{    
+        margin: 40px auto;
+        width: 50%;
+        &--commander{
+            display: inline-block;
+            padding: 15px 48px;
+            font-weight: 500;
+            font-size: 16px;
+            @include bouton-n-shadow($white, linear-gradient(193.33deg, $dark-purple -11.44%, $light-purple 123.93%), 25px, 0px 4px 10px $shadow-color);
+            @include bouton-hover;
+        }
+    }
+}
+
+.footer {
+    background-color: $dark-grey;
+    display: flex;
+    flex-direction: column;
+    padding: 22px 25px;
+    &__logo {
+        font-family: 'Shrikhand', cursive;
+        color: $white;
+    }
+    &__secondarylink {
+        display: flex;
+        flex-direction: column;
+        &--lien {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 7px;
+            i {
+                margin-right: 11px;
+                font-size: 13px;
+            }
+            .fa-handshake-angle{
+                margin-right: 7px;
+            }
+            &:nth-child(3), &:nth-child(4) {
+                font-weight: 400;
+            }
+            &:active, &:any-link, &:focus, &:hover {
+                color: $white
+            }
+        }
+    }
+}

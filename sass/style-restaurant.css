@@ -1,0 +1,245 @@
+@keyframes rotation-spinner {
+  0% {
+    transform: rotate(0deg);
+    z-index: 1;
+    top: 40%;
+  }
+  40% {
+    opacity: 1;
+  }
+  99% {
+    transform: rotate(720deg);
+    z-index: 2;
+    top: 40%;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1;
+  }
+}
+@keyframes main-display {
+  0% {
+    z-index: 1;
+    opacity: 0;
+  }
+  50% {
+    z-index: 1;
+    opacity: 0;
+  }
+  100% {
+    z-index: 2;
+    opacity: 1;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header__topheadresto {
+  width: 100%;
+}
+.header__topheadresto--link {
+  margin: 24px;
+  display: inline-block;
+}
+.header__topheadresto--link .fa-arrow-left {
+  font-size: 20px;
+}
+.header__topheadresto--link:visited, .header__topheadresto--link:any-link, .header__topheadresto--link:focus, .header__topheadresto--link:hover {
+  color: #000000;
+}
+.header__topheadresto--title {
+  display: inline-block;
+  font-family: Shrikhand;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 14px 40px 5px;
+}
+.header__background {
+  background-image: url("../assets/restaurants/la-palette-du-gout.jpg");
+  height: 275px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/**
+#test {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: lightblue;
+    width: 150px;
+}
+**/
+.main {
+  background-color: #F7F7F7;
+  border-radius: 50px 50px 0px 0px;
+  padding: 15px 13px;
+  margin-top: -80px;
+}
+.main__titreresto--title {
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 28px;
+  margin-left: 4px;
+}
+.main__titreresto--fav {
+  position: absolute;
+  right: 11%;
+  top: 37%;
+  font-size: 22px;
+  width: 22.7px;
+}
+.main__titreresto .fa-solid {
+  display: none;
+  background: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main__titreresto .fa-regular {
+  display: block;
+}
+.main__titreresto .fa-regular i {
+  color: #000000;
+}
+.main__titreresto .invisible {
+  display: none;
+}
+.main__titreresto #heart:checked + label > .fa-regular {
+  display: none;
+}
+.main__titreresto #heart:checked + label > .fa-solid {
+  display: block;
+}
+.main .menu__titre {
+  display: block;
+  width: 40px;
+  border-bottom: solid 3px #99E2D0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+}
+.main .menu__produit {
+  color: #000000;
+  background: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  height: 69px;
+}
+.main .menu__produit--left {
+  padding: 12px 0px 12px 15px;
+}
+.main .menu__produit--nom {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main .menu__produit--description {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 0;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main .menu__produit--right {
+  display: flex;
+  flex-direction: row;
+  height: 69px;
+}
+.main .menu__produit--prix {
+  height: 100%;
+  padding-top: 21px;
+  font-size: 15px;
+  font-weight: 700;
+  padding-right: 15px;
+  line-height: 18px;
+}
+.main .menu__produit--ok {
+  width: 59px;
+  padding: auto;
+  color: #FFFFFF;
+  background-color: #99E2D0;
+  height: 100%;
+  border-radius: 0px 15px 15px 0;
+  display: none;
+}
+.main .menu__produit--ok i {
+  position: relative;
+  top: 36%;
+  left: 32%;
+  font-size: 20px;
+}
+.main__bouton {
+  margin: 40px auto;
+  width: 50%;
+}
+.main__bouton--commander {
+  display: inline-block;
+  padding: 15px 48px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.main__bouton--commander:hover, .main__bouton--commander:active {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 25px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 25px;
+}
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  color: #FFFFFF;
+}
+.footer__secondarylink {
+  display: flex;
+  flex-direction: column;
+}
+.footer__secondarylink--lien {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.footer__secondarylink--lien i {
+  margin-right: 11px;
+  font-size: 13px;
+}
+.footer__secondarylink--lien .fa-handshake-angle {
+  margin-right: 7px;
+}
+.footer__secondarylink--lien:nth-child(3), .footer__secondarylink--lien:nth-child(4) {
+  font-weight: 400;
+}
+.footer__secondarylink--lien:active, .footer__secondarylink--lien:any-link, .footer__secondarylink--lien:focus, .footer__secondarylink--lien:hover {
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=style-restaurant.css.map */
