@@ -39,12 +39,40 @@
         z-index: 1;
         opacity: 0;
       }
-      50%{
+    50%{
         z-index: 1;
         opacity: 0;
-      }
-      100%{
+    }
+    100%{
         z-index: 2;
         opacity: 1;
-      }
+    }
+}
+
+@keyframes slide-on{
+    0%{
+        width: 0px;
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    100%{
+        width: 59px;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-off{
+    0%{
+        width: 59px;
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100%{
+        width: 0px;
+        opacity: 0;
+    }
 }
