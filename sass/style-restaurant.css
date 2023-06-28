@@ -155,7 +155,7 @@ a {
   display: block;
 }
 .main .menu {
-  animation: main-display 300ms;
+  animation: main-display 500ms;
 }
 .main .menu__titre {
   display: block;
