@@ -37,8 +37,19 @@ a {
             width: 162px;
         }
     }
-    &__background{
+    .palette {
         background-image: url("../assets/restaurants/la-palette-du-gout.jpg");
+    }
+    .delice {
+        background-image: url("../assets/restaurants/le-delice-des-sens.jpg");
+    }
+    .note {
+        background-image: url("../assets/restaurants/la-note-enchantee.jpg");
+    }
+    .francaise {
+        background-image: url("../assets/restaurants/a-la-francaise.jpg");
+    }
+    &__background{
         height: 275px;
         background-size: contain;
         background-repeat: no-repeat;
@@ -96,6 +107,7 @@ a {
             font-weight: 300;
             font-size: 16px;
             line-height: 19px;
+            margin-top: 40px;
         }
         animation: main-display 300ms;
         &__produit {
@@ -115,6 +127,8 @@ a {
                 padding: 12px 0px 12px 15px;
                 width: 100%;
                 transition-delay: 250ms;
+                display: flex;
+                flex-direction: column;
             }
             &--nom {
                 font-weight: 500;
@@ -145,7 +159,7 @@ a {
             }
             &--prix {
                 height: 100%;
-                padding-top: 21px;
+                padding-top: 37.5px;
                 font-size: 15px;
                 font-weight: 700;
                 padding-right: 15px;
@@ -156,7 +170,6 @@ a {
             }
             &--ok {
                 width: 0px;
-                padding: auto;
                 color: $white;
                 background-color: $new-background;
                 height: 100%;
