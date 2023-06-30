@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmyfood - À la française</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/55f333ce28.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../sass/style-restaurant.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__topheadresto">
+            <a class="header__topheadresto--link" href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <h1 class="header__topheadresto--title">ohmyfood</h1>
+        </div>
+        <div class="header__background francaise"></div>
+    </header>
+    <main class="main">
+        <div class="main__titreresto">
+            <h1 class="main__titreresto--title">À la française</h1>
+            <div class="main__titreresto--fav">
+                <input type="checkbox" id="heart" class="invisible">
+                <label class="btn" for="heart"><i class="fa-sharp fa-regular fa-heart"></i><i class="fa-sharp fa-solid fa-heart"></i></label>
+            </div>            
+        </div>
+        <section class="menu">
+            <h2 class="menu__titre">ENTRÉES</h2>
+            <div class="menu__produit">
+                <input type="checkbox" id="entrees1" class="invisible">
+                <label class="btn" for="entrees1">
+                    <span class="menu__produit--left">
+                        <span class="menu__produit--nom">Tartare de poulpe acidulé</span>
+                        <span class="menu__produit--description">Aux zestes d'orange</span>
+                    </span>
+                    <span class="menu__produit--right">
+                        <span class="menu__produit--prix">25€</span>
+                        <span class="menu__produit--ok"><i class="fa-solid fa-circle-check"></i></span>
+                    </span>
+                </label>
+            </div>
+            <div class="menu__produit">
+                <input type="checkbox" id="entrees2" class="invisible">
+                <label class="btn" for="entrees2">
+                    <span class="menu__produit--left">
+                        <span class="menu__produit--nom">Velouté de légumes d'antan</span>
+                        <span class="menu__produit--description">Carotte, panais, topinambour</span>
+                    </span>
+                    <span class="menu__produit--right">
+                        <span class="menu__produit--prix">35€</span>
+                        <span class="menu__produit--ok"><i class="fa-solid fa-circle-check"></i></span>
+                    </span>
+                </label>
+            </div>
+            <div class="menu__produit">
+                <input type="checkbox" id="entrees3" class="invisible">
+                <label class="btn" for="entrees3">
+                    <span class="menu__produit--left">
+                        <span class="menu__produit--nom">Soupe à l'oignon</span>
+                        <span class="menu__produit--description">Revisitée</span>
+                    </span>
+                    <span class="menu__produit--right">
+                        <span class="menu__produit--prix">20€</span>
+                        <span class="menu__produit--ok"><i class="fa-solid fa-circle-check"></i></span>
+                    </span>
+                </label>
+            </div>
+        </section>
+        <section class="menu">
+            <h2 class="menu__titre">PLATS</h2>
+            <div class="menu__produit">
+                <input type="checkbox" id="plats1" class="invisible">
+                <label class="btn" for="plats1">
+                    <span class="menu__produit--left">
+                        <span class="menu__produit--nom">Coquilles Saint-Jacques</span>
+                        <span class="menu__produit--description">Accompagnées d'une purée de panais</span>
+                    </span>
+                    <span class="menu__produit--right">
+                        <span class="menu__produit--prix">40€</span>
+                        <span class="menu__produit--ok"><i class="fa-solid fa-circle-check"></i></span>
+                    </span>
+                </label>
+            </div>
+            <div class="menu__produit">
+                <input type="checkbox" id="plats2" class="invisible">
+                <label class="btn" for="plats2">
+                    <span class="menu__produit--left">
+                        <span class="menu__produit--nom">Magret de canard</span>
+                        <span class="menu__produit--description">Et parmentier de pommes de terre</span>
+                    </span>
+                    <span class="menu__produit--right">
+                        <span class="menu__produit--prix">35€</span>
+                        <span class="menu__produit--ok"><i class="fa-solid fa-circle-check"></i></span>
+                    </span>
+                </label>
+            </div>
+            <div class="menu__produit">
+                <input type="checkbox" id="plats3" class="invisible">
+                <label class="btn" for="plats3">
+                    <span class="menu__produit--left">
+                        <span class="menu__produit--nom">Pigeonneau d’Ille-et-Vilaine</span>
+                        <span class="menu__produit--description">Sur son lit de gnocchis aux légumes</span>
+                    </span>
+                    <span class="menu__produit--right">
+                        <span class="menu__produit--prix">44€</span>
+                        <span class="menu__produit--ok"><i class="fa-solid fa-circle-check"></i></span>
+                    </span>
+                </label>
+            </div>
+        </section>
+        <section class="menu">
+            <h2 class="menu__titre">DESSERTS</h2>
+            <div class="menu__produit">
+                <input type="checkbox" id="desserts1" class="invisible">
+                <label class="btn" for="desserts1">
+                    <span class="menu__produit--left">
+                        <span class="menu__produit--nom">Pétales de violettes glacés</span>
+                        <span class="menu__produit--description">Et purée de noisettes</span>
+                    </span>
+                    <span class="menu__produit--right">
+                        <span class="menu__produit--prix">18€</span>
+                        <span class="menu__produit--ok"><i class="fa-solid fa-circle-check"></i></span>
+                    </span>
+                </label>
+            </div>
+            <div class="menu__produit">
+                <input type="checkbox" id="desserts2" class="invisible">
+                <label class="btn" for="desserts2">
+                    <span class="menu__produit--left">
+                        <span class="menu__produit--nom">Fondant au chocolat</span>
+                        <span class="menu__produit--description">Revisité</span>
+                    </span>
+                    <span class="menu__produit--right">
+                        <span class="menu__produit--prix">22€</span>
+                        <span class="menu__produit--ok"><i class="fa-solid fa-circle-check"></i></span>
+                    </span>
+                </label>
+            </div>
+            <div class="menu__produit">
+                <input type="checkbox" id="desserts3" class="invisible">
+                <label class="btn" for="desserts3">
+                    <span class="menu__produit--left">
+                        <span class="menu__produit--nom">Millefeuille croustillant</span>
+                        <span class="menu__produit--description">Myrtilles et pâte d’amande</span>
+                    </span>
+                    <span class="menu__produit--right">
+                        <span class="menu__produit--prix">23€</span>
+                        <span class="menu__produit--ok"><i class="fa-solid fa-circle-check"></i></span>
+                    </span>
+                </label>
+            </div>
+        </section>
+        <div class="main__bouton">
+            <a href="#" class="main__bouton--commander">Commander</a> 
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__logo">
+            <span>ohmyfood</span>
+        </div>
+        <div class="footer__secondarylink">
+            <a class="footer__secondarylink--lien" href="#"><i class="fa-sharp fa-solid fa-utensils"></i>Proposer un restaurant</a>
+            <a class="footer__secondarylink--lien" href="#"><i class="fa-sharp fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+            <a class="footer__secondarylink--lien" href="#">Mentions légales</a>
+            <a class="footer__secondarylink--lien" href="#">Contact</a>
+        </div>
+    </footer>
+</body>
