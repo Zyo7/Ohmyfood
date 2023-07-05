@@ -89,6 +89,12 @@ a {
   margin: 10px auto;
   width: 162px;
 }
+.header__background {
+  height: 275px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
 .header .palette {
   background-image: url("../assets/restaurants/la-palette-du-gout.jpg");
 }
@@ -97,15 +103,11 @@ a {
 }
 .header .note {
   background-image: url("../assets/restaurants/la-note-enchantee.jpg");
+  background-size: cover;
+  background-position: center -120px;
 }
 .header .francaise {
   background-image: url("../assets/restaurants/a-la-francaise.jpg");
-}
-.header__background {
-  height: 275px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
 }
 
 .main {
@@ -113,6 +115,10 @@ a {
   border-radius: 50px 50px 0px 0px;
   padding: 15px 13px;
   margin-top: -80px;
+}
+.main .divplus {
+  margin: 0px;
+  padding: 0px;
 }
 .main__titreresto {
   position: relative;
@@ -296,6 +302,153 @@ a {
 }
 .footer__secondarylink--lien:active, .footer__secondarylink--lien:any-link, .footer__secondarylink--lien:focus, .footer__secondarylink--lien:hover {
   color: #FFFFFF;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .header__background {
+    height: 360px;
+    background-size: cover;
+    background-position: center -100px;
+  }
+  .header .note {
+    background-position: center -340px;
+  }
+  .header .delice {
+    background-position: center -100px;
+  }
+  .main {
+    padding: 15px 25px;
+  }
+  .main__titreresto--fav {
+    right: 3%;
+  }
+  .main .menu__produit {
+    margin-top: 15px;
+  }
+  .footer {
+    padding: 47px 25px 30px;
+  }
+  .footer__logo {
+    width: 137px;
+    height: 27px;
+    margin-bottom: 26px;
+  }
+  .footer__logo p {
+    margin: 0;
+  }
+  .footer__secondarylink {
+    flex-direction: row;
+  }
+  .footer__secondarylink--lien {
+    margin-bottom: 0px;
+    width: 190px;
+    margin-left: 7px;
+  }
+  .footer__secondarylink--lien:nth-child(3), .footer__secondarylink--lien:nth-child(4) {
+    width: 130px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1440px) {
+  .header__background {
+    height: 350px;
+    background-size: cover;
+    background-position: center -280px;
+  }
+  .header .note {
+    background-position: center -600px;
+  }
+  .main {
+    width: 900px;
+    margin: -80px auto 0px;
+  }
+  .main .divplus {
+    width: 634px;
+    margin: 36px auto 0px;
+  }
+  .main__titreresto {
+    margin: 0px auto;
+  }
+  .main__titreresto--fav {
+    right: 23%;
+  }
+  .main__titreresto--title {
+    text-align: center;
+  }
+  .footer {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 57px 25px 30px;
+  }
+  .footer__logo {
+    width: 137px;
+    height: 27px;
+    margin-left: 16px;
+  }
+  .footer__logo p {
+    margin: 0;
+  }
+  .footer__secondarylink {
+    flex-direction: row;
+  }
+  .footer__secondarylink--lien {
+    margin-bottom: 0px;
+    width: 190px;
+    margin-left: 7px;
+  }
+  .footer__secondarylink--lien:nth-child(3), .footer__secondarylink--lien:nth-child(4) {
+    width: 130px;
+  }
+}
+@media (min-width: 1441px) {
+  .header__background {
+    height: 393px;
+    background-size: cover;
+    background-position: center -355px;
+  }
+  .header .note {
+    background-position: center -660px;
+  }
+  .main {
+    width: 1055px;
+    margin: -80px auto 0px;
+  }
+  .main .divplus {
+    width: 634px;
+    margin: 36px auto 0px;
+  }
+  .main__titreresto {
+    margin: 0px auto;
+  }
+  .main__titreresto--fav {
+    right: 23%;
+  }
+  .main__titreresto--title {
+    text-align: center;
+  }
+  .footer {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 57px 25px 30px;
+  }
+  .footer__logo {
+    width: 137px;
+    height: 27px;
+    margin-left: 16px;
+  }
+  .footer__logo p {
+    margin: 0;
+  }
+  .footer__secondarylink {
+    flex-direction: row;
+  }
+  .footer__secondarylink--lien {
+    margin-bottom: 0px;
+    width: 190px;
+    margin-left: 7px;
+  }
+  .footer__secondarylink--lien:nth-child(3), .footer__secondarylink--lien:nth-child(4) {
+    width: 130px;
+  }
 }
 
 /*# sourceMappingURL=style-restaurant.css.map */
