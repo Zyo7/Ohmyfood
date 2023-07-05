@@ -86,10 +86,7 @@ a {
 }
 .header__topheadresto--title {
   display: block;
-  font-family: Shrikhand;
-  font-size: 30px;
-  font-weight: 400;
-  margin: 0px auto 5px;
+  margin: 10px auto;
   width: 162px;
 }
 .header .palette {
@@ -208,7 +205,7 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main .menu__produit #entrees1:checked + label > .menu__produit--left, .main .menu__produit #plats1:checked + label > .menu__produit--left, .main .menu__produit #desserts1:checked + label > .menu__produit--left, .main .menu__produit #entrees2:checked + label > .menu__produit--left, .main .menu__produit #plats2:checked + label > .menu__produit--left, .main .menu__produit #desserts2:checked + label > .menu__produit--left, .main .menu__produit #entrees3:checked + label > .menu__produit--left, .main .menu__produit #plats3:checked + label > .menu__produit--left, .main .menu__produit #desserts3:checked + label > .menu__produit--left, .main .menu__produit #entrees4:checked + label > .menu__produit--left {
+.main .menu__produit input[id*=checks]:checked + label > .menu__produit--left {
   width: 59%;
   transition-delay: 1ms;
 }
@@ -225,7 +222,7 @@ a {
   padding-right: 15px;
   line-height: 18px;
 }
-.main .menu__produit #entrees1:not(:checked) + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #plats1:not(:checked) + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #desserts1:not(:checked) + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #entrees2:not(:checked) + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #plats2:not(:checked) + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #desserts2:not(:checked) + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #entrees3:not(:checked) + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #plats3:not(:checked) + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #desserts3:not(:checked) + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #entrees4:not(:checked) + label > .menu__produit--right > .menu__produit--ok {
+.main .menu__produit input[id*=checks]:not(:checked) + label > .menu__produit--right > .menu__produit--ok {
   animation: slide-off 200ms linear;
 }
 .main .menu__produit--ok {
@@ -243,7 +240,7 @@ a {
   left: 32%;
   font-size: 20px;
 }
-.main .menu__produit #entrees1:checked + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #plats1:checked + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #desserts1:checked + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #entrees2:checked + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #plats2:checked + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #desserts2:checked + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #entrees3:checked + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #plats3:checked + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #desserts3:checked + label > .menu__produit--right > .menu__produit--ok, .main .menu__produit #entrees4:checked + label > .menu__produit--right > .menu__produit--ok {
+.main .menu__produit input[id*=checks]:checked + label > .menu__produit--right > .menu__produit--ok {
   width: 59px;
   opacity: 1;
 }

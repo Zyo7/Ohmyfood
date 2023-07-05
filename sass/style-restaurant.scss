@@ -30,10 +30,7 @@ a {
         }
         &--title {
             display: block;
-            font-family: Shrikhand;
-            font-size: 30px;
-            font-weight: 400;
-            margin: 0px auto 5px;
+            margin: 10px auto;
             width: 162px;
         }
     }
@@ -148,7 +145,7 @@ a {
                 overflow: hidden;
                 text-overflow: ellipsis;    
             }
-            #entrees1:checked + label > .menu__produit--left, #plats1:checked + label > .menu__produit--left, #desserts1:checked + label > .menu__produit--left, #entrees2:checked + label > .menu__produit--left, #plats2:checked + label > .menu__produit--left, #desserts2:checked + label > .menu__produit--left, #entrees3:checked + label > .menu__produit--left, #plats3:checked + label > .menu__produit--left, #desserts3:checked + label > .menu__produit--left, #entrees4:checked + label > .menu__produit--left {
+            input[id*=checks]:checked + label > .menu__produit--left {
                 width: 59%;
                 transition-delay: 1ms;
             }
@@ -165,7 +162,7 @@ a {
                 padding-right: 15px;
                 line-height: 18px;
             }
-            #entrees1:not(:checked) + label > .menu__produit--right > .menu__produit--ok, #plats1:not(:checked) + label > .menu__produit--right > .menu__produit--ok, #desserts1:not(:checked) + label > .menu__produit--right > .menu__produit--ok, #entrees2:not(:checked) + label > .menu__produit--right > .menu__produit--ok, #plats2:not(:checked) + label > .menu__produit--right > .menu__produit--ok, #desserts2:not(:checked) + label > .menu__produit--right > .menu__produit--ok, #entrees3:not(:checked) + label > .menu__produit--right > .menu__produit--ok, #plats3:not(:checked) + label > .menu__produit--right > .menu__produit--ok, #desserts3:not(:checked) + label > .menu__produit--right > .menu__produit--ok, #entrees4:not(:checked) + label > .menu__produit--right > .menu__produit--ok {
+            input[id*=checks]:not(:checked) + label > .menu__produit--right > .menu__produit--ok {
                 animation: slide-off 200ms linear;
             }
             &--ok {
@@ -183,7 +180,7 @@ a {
                     font-size: 20px;
                 }
             }
-            #entrees1:checked + label > .menu__produit--right > .menu__produit--ok, #plats1:checked + label > .menu__produit--right > .menu__produit--ok, #desserts1:checked + label > .menu__produit--right > .menu__produit--ok, #entrees2:checked + label > .menu__produit--right > .menu__produit--ok, #plats2:checked + label > .menu__produit--right > .menu__produit--ok, #desserts2:checked + label > .menu__produit--right > .menu__produit--ok, #entrees3:checked + label > .menu__produit--right > .menu__produit--ok, #plats3:checked + label > .menu__produit--right > .menu__produit--ok, #desserts3:checked + label > .menu__produit--right > .menu__produit--ok, #entrees4:checked + label > .menu__produit--right > .menu__produit--ok {
+            input[id*=checks]:checked + label > .menu__produit--right > .menu__produit--ok {
                 width: 59px;
                 opacity: 1;
             }
