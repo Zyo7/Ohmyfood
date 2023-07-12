@@ -112,7 +112,6 @@ a {
             line-height: 19px;
             margin-top: 40px;
         }
-        animation: main-display 1000ms;
         &__produit {
             @include bouton-n-shadow($black, $white, 15px, 0px 4px 15px $shadow-lightgrey);
             margin-top: 12px;
@@ -191,6 +190,15 @@ a {
                 opacity: 1;
             }
         }
+    }
+    .entrees {
+        animation: main-display 1000ms;        
+    }
+    .plats {
+        animation: main-display 2000ms;
+    }
+    .desserts{
+        animation: main-display 3000ms;
     }
     &__bouton{    
         margin: 40px auto;

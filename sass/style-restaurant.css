@@ -157,9 +157,6 @@ a {
 .main__titreresto #heart:checked + label > .fa-solid {
   display: block;
 }
-.main .menu {
-  animation: main-display 1000ms;
-}
 .main .menu__titre {
   display: block;
   width: 40px;
@@ -249,6 +246,15 @@ a {
 .main .menu__produit input[id*=checks]:checked + label > .menu__produit--right > .menu__produit--ok {
   width: 59px;
   opacity: 1;
+}
+.main .entrees {
+  animation: main-display 1000ms;
+}
+.main .plats {
+  animation: main-display 2000ms;
+}
+.main .desserts {
+  animation: main-display 3000ms;
 }
 .main__bouton {
   margin: 40px auto;
